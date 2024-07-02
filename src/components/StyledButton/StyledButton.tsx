@@ -1,8 +1,12 @@
 import { styled } from "@mui/material"
 import { ReactNode } from "react"
 
+type StyledButtonProps = {
+    children: ReactNode,
+    onClick: () => void
+}
 
-export function StyledButton({ children }: {children: ReactNode}){
+export function StyledButton({ children, onClick }: StyledButtonProps){
 
     const StyledButton = styled("button")(({ theme })=>({
         backgroundColor: "transparent",
@@ -10,18 +14,18 @@ export function StyledButton({ children }: {children: ReactNode}){
         borderRadius: "3px",
         padding: "5px 15px",
         width: "100%",
+        color: theme.palette.primary.contrastText,
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
         gap: "10px",
-        color: theme.palette.primary.contrastText,
-        '&hover': {
-            backgroundcolor: theme.palette.secondary.light
+        '&:hover': {
+            backgroundColor: theme.palette.secondary.light
         }
     }))
 
 
     return(
-        <StyledButton>{children}</StyledButton>
+        <StyledButton onClick={onClick}>{children}</StyledButton>
     )
 }
