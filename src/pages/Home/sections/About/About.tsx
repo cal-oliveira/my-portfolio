@@ -4,7 +4,7 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
 export function About(){
 
-    const StyledAbout = styled("div")(({ theme })=>({
+    const StyledAbout = styled("div")(()=>({
         height: "60vh",
         marginTop: "50px"
     }))
