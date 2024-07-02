@@ -25,7 +25,6 @@ export function About(){
             <StyledAbout>
                 <Container maxWidth="lg">
                     <Typography color={"black"} variant="h2" textAlign="center">About me</Typography>
-
                     <Grid container display="flex" justifyContent="center" alignItems="center" spacing={3} mt={2}>
                         <Grid item xs={9} md={4} >
                             <StyledBox>
@@ -44,7 +43,6 @@ export function About(){
                             </StyledBox>
                         </Grid>
                     </Grid>
-
                 </Container>
             </StyledAbout>
         </>
