@@ -5,8 +5,8 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 export function About(){
 
     const StyledAbout = styled("div")(()=>({
-        height: "60vh",
-        marginTop: "50px"
+        height: "45vh",
+        marginTop: "20px"
     }))
 
     const StyledBox = styled(Box)(()=>({

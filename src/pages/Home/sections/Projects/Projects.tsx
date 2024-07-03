@@ -1,30 +1,46 @@
-import { Box, Typography, styled } from "@mui/material"
+import { Box, Container, Grid, Typography, styled } from "@mui/material"
 
 export function Projects(){
 
     const StyledProject = styled("div")(({ theme })=>({
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
-        display: "flex",
-        alignItems: "center"
+        
     }))
 
     const StyledBox = styled(Box)(()=>({
-        boxShadow: "0px 0px 15px -3px rgba(0,0,0,0.3)",
-        height: "15vh",
+        border: "2px solid rgba(211,211,211,0.2)",
+        height: "50vh",
         width: "100%",
         display: "flex",
         alignItems: "center",
+        
         justifyContent: "center",
         flexDirection: "column",
         textAlign: "center",
+        borderRadius: "4px"
     }))
 
     return(
         <>
             <StyledProject>
-              <Typography color={"black"} variant="h2" textAlign="center">Projects</Typography>
+                <Container>
+                  <Typography color={"white"} variant="h2" textAlign="center" padding={5}>Projects</Typography>
 
+                  <Grid container spacing={4}>
+                    <Grid item md={6}>
+                        <StyledBox>
+
+                        </StyledBox>
+                    </Grid>
+
+                    <Grid item md={6}>
+                        <StyledBox>
+                            
+                        </StyledBox>
+                    </Grid>
+                  </Grid>
+                </Container>
             </StyledProject>
         </>
     )
