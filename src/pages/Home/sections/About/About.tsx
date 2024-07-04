@@ -6,8 +6,9 @@ import { SectionTitle } from "../../../../components/SectionTitle";
 export function About(){
 
     const StyledAbout = styled("div")(()=>({
-        height: "45vh",
+        height: "100%",
         marginTop: "20px",
+        marginBottom: "20px",
         '@media (max-width: 600px)': {
             height: "auto",
             marginBottom: "20px"
@@ -40,7 +41,7 @@ export function About(){
             <StyledAbout>
                 <Container maxWidth="lg">
                     <SectionTitle color={"black"}>About me</SectionTitle>
-                    <Grid container display="flex" justifyContent="center" alignItems="center" spacing={3} mt={2}>
+                    <Grid container display="flex" justifyContent="center" alignItems="center" spacing={3}>
                         <Grid item xs={9} md={4} >
                             <StyledBox>
                                 <SchoolIcon />

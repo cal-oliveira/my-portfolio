@@ -6,6 +6,6 @@ type SectionTitleProps = TypographyProps & {
 
 export function SectionTitle({children, ...TypographyProps}: SectionTitleProps){
     return(
-        <Typography variant="h2" textAlign="center" {...TypographyProps}>{children}</Typography>
+        <Typography padding={3} variant="h2" textAlign="center" {...TypographyProps}>{children}</Typography>
     )
 }
