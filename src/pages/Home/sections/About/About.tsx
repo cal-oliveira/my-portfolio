@@ -1,12 +1,17 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material"
 import SchoolIcon from '@mui/icons-material/School';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import { SectionTitle } from "../../../../components/SectionTitle";
 
 export function About(){
 
     const StyledAbout = styled("div")(()=>({
         height: "45vh",
-        marginTop: "20px"
+        marginTop: "20px",
+        '@media (max-width: 600px)': {
+            height: "auto",
+            marginBottom: "20px"
+        }
     }))
 
     const StyledBox = styled(Box)(()=>({
@@ -34,7 +39,7 @@ export function About(){
         <>
             <StyledAbout>
                 <Container maxWidth="lg">
-                    <Typography color={"black"} variant="h2" textAlign="center">About me</Typography>
+                    <SectionTitle color={"black"}>About me</SectionTitle>
                     <Grid container display="flex" justifyContent="center" alignItems="center" spacing={3} mt={2}>
                         <Grid item xs={9} md={4} >
                             <StyledBox>
@@ -57,7 +62,7 @@ export function About(){
                     <p style={{ textAlign: "center", lineHeight: '1.5' }}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero eligendi officiis eius facilis dolorum perspiciatis eos. Autem provident cupiditate in, amet quod sunt ut dicta exercitationem aliquam eum repellendus neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta libero in vitae, provident nemo dolores, cum voluptatum minus veniam rem atque tempora ex optio officia vero nobis reprehenderit quibusdam architecto. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi corrupti, iste animi pariatur accusamus facere veniam et tempore incidunt ipsum harum assumenda magnam dolorem cum qui quae natus rerum deleniti.</p>
                     <hr />
 
-                    <Typography color={"black"} variant="h2" textAlign="center">Skills</Typography>
+                    <SectionTitle color={"black"}>Skills</SectionTitle>
                     <Grid container display="flex" justifyContent="center" alignItems="center" spacing={2}> 
                         <Grid item xs={4} md={2}>
                             <StyledSkill>
