@@ -21,7 +21,11 @@ export default function Project({ title, urlImage, description, techs, porjectUr
         justifyContent: "center",
         flexDirection: "column",
         textAlign: "center",
-        borderRadius: "4px"
+        borderRadius: "4px",
+        '@media (max-width: 600px)': {
+            height: "auto",
+            padding: "10px"
+        }
     }))
 
     const StyledTypograph = styled(Typography)(()=>({
