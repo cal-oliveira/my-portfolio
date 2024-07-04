@@ -19,6 +19,12 @@ export function Hero(){
         border: `1px solid ${theme.palette.primary.contrastText}`
     }))
 
+    // funcão para enviar email ao clicar em "contact me"
+    function mailTo(){
+        let link = "mailto:calebe81899026@gmail.com"
+        window.location.href = link
+    }
+
     return(
         <>
             <StyledHero>
@@ -49,7 +55,7 @@ export function Hero(){
                                 </Grid>
 
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton onClick={()=>console.log('contact me')}>
+                                    <StyledButton onClick={mailTo}>
                                         <EmailIcon />
                                         <Typography>Contact me</Typography>
                                     </StyledButton>
