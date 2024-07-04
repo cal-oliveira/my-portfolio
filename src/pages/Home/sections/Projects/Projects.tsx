@@ -7,7 +7,9 @@ export function Projects(){
     const StyledProject = styled("div")(({ theme })=>({
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
-        
+        '@media (max-width: 600px)': {
+            height: "auto",
+        }
     }))
 
     /* const StyledBox = styled(Box)(()=>({
