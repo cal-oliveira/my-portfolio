@@ -31,7 +31,7 @@ export function Hero(){
                                     <AnimatedBackground />
                                 </Box>
                                 <Box position="relative" textAlign="center">
-                                    <StyledImg src="https://github.com/cal-oliveira.png" alt="" />
+                                    <StyledImg src="https://github.com/cal-oliveira.png" alt="Foto do developer" />
                                 </Box>
                             </Box>
                         </Grid>

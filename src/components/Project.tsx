@@ -35,17 +35,21 @@ export default function Project({ title, urlImage, description, techs, porjectUr
     return(
         <>
             <StyledBox>
-                <Container>
-                    <Box width="100%" display="flex">
+                <Container style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                    <Box  width="100%" display="flex" >
                         <StyledTypograph variant="h4">{title}</StyledTypograph>
                     </Box>
-                    <img src={urlImage} width="100%" alt={`Imagem do projeto ${title}`} />
-                    <StyledTypograph textAlign="start">{description}</StyledTypograph>
-                    <StyledTypograph paddingY={2} fontWeight="bold" textAlign="start">Techs: {techs}</StyledTypograph>
-                    <Box display="flex" gap={2}>
-                        <StyledButton onClick={()=>{}}>Ver Projeto</StyledButton>
-                        <StyledButton onClick={()=>{}}>Ver Código</StyledButton>
+                    <Box minHeight="415px" height="100%" alignSelf="center">
+                        <img  src={urlImage} width="100%" alt={`Imagem do projeto ${title}`} />
                     </Box>
+                    <>
+                        <StyledTypograph textAlign="start">{description}</StyledTypograph>
+                        <StyledTypograph paddingY={2} fontWeight="bold" textAlign="start">Techs: {techs}</StyledTypograph>
+                        <Box display="flex" gap={2}>
+                            <StyledButton onClick={()=>{}}>Ver Projeto</StyledButton>
+                            <StyledButton onClick={()=>{}}>Ver Código</StyledButton>
+                        </Box>
+                    </>
                 </Container>
             </StyledBox>
         </>
