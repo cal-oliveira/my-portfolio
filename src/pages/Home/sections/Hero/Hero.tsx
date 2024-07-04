@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, styled } from "@mui/material"
+import { Box, Container, Grid, Link, Typography, styled } from "@mui/material"
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import { StyledButton } from "../../../../components/StyledButton/StyledButton";
@@ -25,6 +25,18 @@ export function Hero(){
         window.location.href = link
     }
 
+    let path = "../../../../cv/CURRICULO-Calebe-Bezerra-Oliveira.pdf"
+
+    function downloadCv(path: string){
+        let link = document.createElement('a');
+        link.href = path;
+        link.style.display = 'none';
+        document.body.appendChild(link); 
+        link.click(); 
+
+        document.body.removeChild(link)
+    }
+
     return(
         <>
             <StyledHero>
@@ -48,10 +60,12 @@ export function Hero(){
 
                             <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton onClick={()=>console.log('download')}>
-                                        <DownloadIcon />
-                                        <Typography>Download CV</Typography>
-                                    </StyledButton>
+                                    <Link width="100%" href={path} download>
+                                        <StyledButton>
+                                            <DownloadIcon />
+                                            <Typography>Download CV</Typography>
+                                        </StyledButton>
+                                    </Link>
                                 </Grid>
 
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">

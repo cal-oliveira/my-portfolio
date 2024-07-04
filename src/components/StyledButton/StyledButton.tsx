@@ -3,7 +3,7 @@ import { ReactNode } from "react"
 
 type StyledButtonProps = {
     children: ReactNode,
-    onClick: () => void
+    onClick?: () => void
 }
 
 export function StyledButton({ children, onClick }: StyledButtonProps){
