@@ -6,11 +6,11 @@ type ProjectProps = {
     urlImage: string,
     description: string,
     techs: string,
-    codeUrl?: string,
-    porjectUrl?: string
+    /* codeUrl?: string,
+    porjectUrl?: string */
 }
 
-export default function Project({ title, urlImage, description, techs, porjectUrl, codeUrl }: ProjectProps){
+export default function Project({ title, urlImage, description, techs, /* porjectUrl, codeUrl */ }: ProjectProps){
 
     const StyledBox = styled(Box)(()=>({
         border: "2px solid rgba(211,211,211,0.2)",
