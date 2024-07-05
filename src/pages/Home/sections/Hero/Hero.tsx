@@ -25,16 +25,16 @@ export function Hero(){
         window.location.href = link
     }
 
-    let path = "../../../../cv/CURRICULO-Calebe-Bezerra-Oliveira.pdf"
+    let pathcv = "C:\Users\kkghi\OneDrive\Documentos\GitHub\my-portfolio\src\cv\CURRICULO-Calebe-Bezerra-Oliveira.pdf"
 
-    function downloadCv(path: string){
-        let link = document.createElement('a');
-        link.href = path;
-        link.style.display = 'none';
-        document.body.appendChild(link); 
-        link.click(); 
-
-        document.body.removeChild(link)
+    function downloadCv(){
+        const url = `${process.env.PUBLIC_URL}./CURRICULO-Calebe-Bezerra-Oliveira.pdf`; // Substitua pelo caminho do seu arquivo
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', '');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     }
 
     return(
@@ -60,8 +60,8 @@ export function Hero(){
 
                             <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <Link width="100%" href={path} download>
-                                        <StyledButton>
+                                    <Link width="100%" href={pathcv} download>
+                                        <StyledButton onClick={()=>downloadCv}>
                                             <DownloadIcon />
                                             <Typography>Download CV</Typography>
                                         </StyledButton>
