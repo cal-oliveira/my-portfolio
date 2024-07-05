@@ -4,6 +4,7 @@ import { Projects } from "./Home/sections/Projects/Projects";
 import { About } from "./Home/sections/About/About";
 import { Footer } from "../components/Footer";
 import { Element } from "react-scroll"
+import { Skills } from "./Home/sections/About/Skills";
 
 export function Home(){
     return(
@@ -14,6 +15,9 @@ export function Home(){
             </Element>
             <Element name="about">
                 <About/>
+            </Element>
+            <Element name="skills">
+                <Skills />
             </Element>
             <Element name="projects">
                 <Projects />

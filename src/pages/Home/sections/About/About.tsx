@@ -63,7 +63,7 @@ export function About(){
                     <p style={{ textAlign: "center", lineHeight: '1.5' }}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero eligendi officiis eius facilis dolorum perspiciatis eos. Autem provident cupiditate in, amet quod sunt ut dicta exercitationem aliquam eum repellendus neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta libero in vitae, provident nemo dolores, cum voluptatum minus veniam rem atque tempora ex optio officia vero nobis reprehenderit quibusdam architecto. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi corrupti, iste animi pariatur accusamus facere veniam et tempore incidunt ipsum harum assumenda magnam dolorem cum qui quae natus rerum deleniti.</p>
                     <hr />
 
-                    <SectionTitle color={"black"}>Skills</SectionTitle>
+                    {/* <SectionTitle color={"black"}>Skills</SectionTitle>
                     <Grid container display="flex" justifyContent="center" alignItems="center" spacing={2}> 
                         <Grid item xs={4} md={2}>
                             <StyledSkill>
@@ -95,7 +95,7 @@ export function About(){
                                 <Typography fontWeight="500">CSS</Typography>
                             </StyledSkill>
                         </Grid>
-                    </Grid>
+                    </Grid> */}
 
                 </Container>
             </StyledAbout>

@@ -11,13 +11,13 @@ export function NavBar(){
         <>
             <AppBar position="absolute">
                 <StyledToolbar>
-                    <Link to="about" smooth={true} duration={600}>
+                    <Link to="about" smooth={true} duration={700}>
                         <MenuItem>About</MenuItem>
                     </Link>
-                    <Link to="skills" smooth={true} duration={600}>
+                    <Link to="skills" smooth={true} duration={700}>
                         <MenuItem>Hard Skills</MenuItem>
                     </Link>
-                    <Link to="projects" smooth={true} duration={600}>
+                    <Link to="projects" smooth={true} duration={700}>
                         <MenuItem>Projects</MenuItem>
                     </Link>
                 </StyledToolbar>
