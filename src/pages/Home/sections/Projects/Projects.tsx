@@ -8,6 +8,7 @@ export function Projects(){
     const StyledProject = styled("div")(({ theme })=>({
         backgroundColor: theme.palette.primary.main,
         height: "auto",
+        paddingBottom: 35,
         '@media (max-width: 600px)': {
             height: "auto",
         }
