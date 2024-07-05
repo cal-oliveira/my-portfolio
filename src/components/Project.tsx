@@ -39,7 +39,7 @@ export default function Project({ title, urlImage, description, techs, /* porjec
                     <Box  width="100%" display="flex" >
                         <StyledTypograph variant="h4">{title}</StyledTypograph>
                     </Box>
-                    <Box minHeight="415px" height="100%" alignSelf="center">
+                    <Box minHeight="415px" height="100%" alignSelf="center" overflow="hidden">
                         <img  src={urlImage} width="100%" alt={`Imagem do projeto ${title}`} />
                     </Box>
                     <>

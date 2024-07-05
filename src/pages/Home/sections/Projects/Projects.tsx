@@ -73,10 +73,10 @@ export function Projects(){
                             variants={boxVariantsLeft}
                         >
                             <Project 
-                                title="Cronômetro"
-                                urlImage="https://raw.githubusercontent.com/cal-oliveira/home-nubank-mobile/master/screenshots/screenshot-1.png"
-                                description="Cronômetro desenvolvido com HTML, CSS e JS Design responsivo e otimizado para dispositivos móveis. Projeto hospedado no github pages"
-                                techs="JavaScript, HTML, CSS"
+                                title="Home Nubank - Mobile"
+                                urlImage="https://github.com/cal-oliveira/home-nubank-mobile/blob/master/screenshots/screenshot-3.png?raw=true"
+                                description="Interface home do app mobile Nubank baseado no projeto conceito 2021(community)"
+                                techs="React Native, Native-Base, TypeScript, Expo"
                             />
                         </motion.div>
                     </Grid>
@@ -90,10 +90,10 @@ export function Projects(){
                             variants={boxVariantsRight}
                         >
                             <Project 
-                                title="PokeNext"
-                                urlImage="https://github.com/cal-oliveira/pokenext/blob/master/screenshots/pokenext.png?raw=true"
-                                description="Pokedex desenvolvido com NextJs e hospedado na Vercel"
-                                techs="JavaScript, HTML, CSS"
+                                title="Snake - Mobile"
+                                urlImage="https://github.com/cal-oliveira/snake-game-React-Native/blob/main/screenshots/game%20snake%20(online-video-cutter.com).gif?raw=true"
+                                description="O clássico jogo da cobrinha (snake) para dispositivos móveis."
+                                techs="React Native, Expo"
                             />
                         </motion.div>
                     </Grid>
