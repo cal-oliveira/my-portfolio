@@ -35,7 +35,7 @@ export default function Project({ title, urlImage, description, techs, /* porjec
     return(
         <>
             <StyledBox>
-                <Container style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                <Container style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", height: "95%" }}>
                     <Box  width="100%" display="flex" >
                         <StyledTypograph variant="h4">{title}</StyledTypograph>
                     </Box>
