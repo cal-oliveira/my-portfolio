@@ -2,6 +2,7 @@ import { Box, Container, Grid, Typography, styled } from "@mui/material"
 import SchoolIcon from '@mui/icons-material/School';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import { SectionTitle } from "../../../../components/SectionTitle";
+import { motion } from "framer-motion";
 
 export function About(){
 
@@ -26,6 +27,16 @@ export function About(){
         textAlign: "center",
     }))
 
+    const boxVariantsLeft = {
+        hidden: { opacity: 0, x: -200 },
+        visible: { opacity: 1, x: 0 }
+    }
+
+    const boxVariantsRight = {
+        hidden: { opacity: 0, x: 200 },
+        visible: { opacity: 1, x: 0 }
+    }
+
     return(
         <>
             <StyledAbout>
@@ -33,20 +44,35 @@ export function About(){
                     <SectionTitle color={"black"}>About me</SectionTitle>
                     <Grid container display="flex" justifyContent="center" alignItems="center" spacing={3}>
                         <Grid item xs={9} md={4} >
-                            <StyledBox>
-                                <SchoolIcon />
-                                <Typography fontWeight="bold" fontSize={18}>Acadêmico</Typography>
-                                <p style={{ lineHeight: 1 }}>Graduando em Análise e desenvolvimento de sistemas</p>
-                            </StyledBox>
-                            
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: false }}
+                                transition={{ duration: 1, delay: 0.2 }}
+                                variants={boxVariantsLeft}
+                            >
+                                <StyledBox>
+                                    <SchoolIcon />
+                                    <Typography fontWeight="bold" fontSize={18}>Acadêmico</Typography>
+                                    <p style={{ lineHeight: 1 }}>Graduando em Análise e desenvolvimento de sistemas</p>
+                                </StyledBox>
+                            </motion.div>
                         </Grid>
 
                         <Grid item xs={9} md={4} >
-                            <StyledBox>
-                                <WorkspacePremiumIcon />
-                                <Typography fontWeight="bold" fontSize={18}>Experiência</Typography>
-                                <p>Em busca da minha primeira experiência profissional</p>
-                            </StyledBox>
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: false }}
+                                transition={{ duration: 1, delay: 0.2 }}
+                                variants={boxVariantsRight}
+                            >
+                                <StyledBox>
+                                    <WorkspacePremiumIcon />
+                                    <Typography fontWeight="bold" fontSize={18}>Experiência</Typography>
+                                    <p>Em busca da minha primeira experiência profissional</p>
+                                </StyledBox>
+                            </motion.div>
                         </Grid>
                     </Grid>
 
