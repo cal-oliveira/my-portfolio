@@ -11,7 +11,7 @@ export let theme = createTheme({
     },
     typography: {
         fontFamily: "Roboto"
-    }
+    },
   });
 
 theme = responsiveFontSizes(theme)

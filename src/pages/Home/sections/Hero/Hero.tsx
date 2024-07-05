@@ -3,8 +3,37 @@ import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import { StyledButton } from "../../../../components/StyledButton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackGround";
+import { motion } from "framer-motion";
+import { ReactTyped, Typed } from "react-typed";
 
 export function Hero(){
+
+    /* const useStyles = makeStyles({
+        animateText: {
+            display: 'block',
+            overflow: 'hidden',
+            width: "24ch",
+            whiteSpace: "nowrap",
+            boxShadow: "1rem 0 0 #f1e100",
+            animation: '$mark .5s steps(1, end) infinite alternate, $write 3s steps(22, end)',
+        },
+        '@keyframes write': {
+            '0%': {
+                width: '0',
+            },
+            '100%': {
+                width: '100%',
+            },
+        },
+        '@keyframes mark': {
+            '50%': {
+                boxShadow: '1rem 0 0 transparent',
+            },
+        },
+    });
+
+    const classes = useStyles() */
+
 
     const StyledHero = styled("div")(({ theme })=>({
         backgroundColor: theme.palette.primary.main,
@@ -47,7 +76,15 @@ export function Hero(){
 
                         <Grid item xs={12} md={7}>
                             <Typography color={"primary.contrastText"} variant="h1" textAlign="center" pb={2}>Calebe Oliveira</Typography>
-                            <Typography color={"primary.contrastText"} variant="h2" textAlign="center">I am a Web and Mobile Developer</Typography>
+                            <motion.div >
+                                <Typography color={"primary.contrastText"} variant="h2" textAlign="center">
+                                    <ReactTyped
+                                        strings={["I'm a Web and Mobile Developer "]}
+                                        typeSpeed={50}
+                                        backSpeed={50}
+                                    />
+                                </Typography>
+                            </motion.div>
 
                             <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
