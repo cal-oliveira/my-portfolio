@@ -1,4 +1,5 @@
 import { AppBar, MenuItem, Toolbar, styled } from "@mui/material";
+import { Link } from "react-scroll";
 
 const StyledToolbar = styled(Toolbar)(()=>({
     display: "flex",
@@ -10,9 +11,15 @@ export function NavBar(){
         <>
             <AppBar position="absolute">
                 <StyledToolbar>
-                    <MenuItem>About</MenuItem>
-                    <MenuItem>Hard Skills</MenuItem>
-                    <MenuItem>Projects</MenuItem>
+                    <Link to="about" smooth={true} duration={600}>
+                        <MenuItem>About</MenuItem>
+                    </Link>
+                    <Link to="skills" smooth={true} duration={600}>
+                        <MenuItem>Hard Skills</MenuItem>
+                    </Link>
+                    <Link to="projects" smooth={true} duration={600}>
+                        <MenuItem>Projects</MenuItem>
+                    </Link>
                 </StyledToolbar>
             </AppBar>
         </>

@@ -24,7 +24,6 @@ export function StyledButton({ children, onClick }: StyledButtonProps){
         }
     }))
 
-
     return(
         <StyledButton onClick={onClick}>{children}</StyledButton>
     )
