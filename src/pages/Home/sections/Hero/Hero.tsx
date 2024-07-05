@@ -4,7 +4,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import { StyledButton } from "../../../../components/StyledButton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackGround";
 import { motion } from "framer-motion";
-import { ReactTyped, Typed } from "react-typed";
+import { ReactTyped } from "react-typed";
 
 export function Hero(){
 
