@@ -59,7 +59,7 @@ export function Projects(){
                         >
                             <Project 
                                 title="PokeNext"
-                                urlImage="../../../../../screenshots/pokedexDemo.gif"
+                                urlImage="https://github.com/cal-oliveira/my-portfolio/blob/main/screenshots/pokedexDemo.gif?raw=true"
                                 description="Pokedex (Poke-Agenda) com mais de 400 pokemons catalogados. Este projeto foi desenvolvido com NextJs, utilizando pokeAPI e está atualmente hospedado na Vercel."
                                 techs="React, Next"
                                 codeUrl="https://github.com/cal-oliveira/pokenext"
