@@ -1,6 +1,5 @@
 import { Box, Container, Link, Typography, styled } from "@mui/material"
 import { StyledButton } from "./StyledButton/StyledButton"
-import { DisabledByDefault } from "@mui/icons-material"
 import { BtnDisable } from "./BtnDisable"
 
 type ProjectProps = {

@@ -8,7 +8,7 @@ type StyledButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function BtnDisable({ children, onClick, ...props }: StyledButtonProps){
 
-    const StyledButton = styled("button")(({ theme })=>({
+    const StyledButton = styled("button")(()=>({
         backgroundColor: "transparent",
         border: `1px solid rgba(211,211,211,0.2)`,
         borderRadius: "3px",
