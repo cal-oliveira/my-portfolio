@@ -43,6 +43,8 @@ export function Projects(){
                                 urlImage="https://github.com/cal-oliveira/Cronometro/blob/main/screenshots/img--1.png?raw=true"
                                 description="Cronômetro desenvolvido com HTML, CSS e JS Design responsivo e otimizado para dispositivos móveis. Projeto hospedado no github pages"
                                 techs="JavaScript, HTML, CSS"
+                                codeUrl="https://github.com/cal-oliveira/Cronometro"
+                                projectUrl="https://cal-oliveira.github.io/Cronometro/"
                             />
                         </motion.div>
                     </Grid>
@@ -57,9 +59,11 @@ export function Projects(){
                         >
                             <Project 
                                 title="PokeNext"
-                                urlImage="https://github.com/cal-oliveira/pokenext/blob/master/screenshots/pokenext.png?raw=true"
+                                urlImage="../../../../../screenshots/pokedexDemo.gif"
                                 description="Pokedex desenvolvido com NextJs e hospedado na Vercel"
                                 techs="React, Next"
+                                codeUrl="https://github.com/cal-oliveira/pokenext"
+                                projectUrl="https://pokenext-gold.vercel.app/"
                             />
                         </motion.div>
                     </Grid>

@@ -1,4 +1,4 @@
-import { Box, Container, Typography, styled } from "@mui/material"
+import { Box, Container, Link, Typography, styled } from "@mui/material"
 import { StyledButton } from "./StyledButton/StyledButton"
 
 type ProjectProps = {
@@ -6,11 +6,11 @@ type ProjectProps = {
     urlImage: string,
     description: string,
     techs: string,
-    /* codeUrl?: string,
-    porjectUrl?: string */
+    codeUrl?: string,
+    projectUrl?: string 
 }
 
-export default function Project({ title, urlImage, description, techs, /* porjectUrl, codeUrl */ }: ProjectProps){
+export default function Project({ title, urlImage, description, techs, projectUrl, codeUrl }: ProjectProps){
 
     const StyledBox = styled(Box)(()=>({
         border: "2px solid rgba(211,211,211,0.2)",
@@ -25,6 +25,9 @@ export default function Project({ title, urlImage, description, techs, /* porjec
         '@media (max-width: 600px)': {
             height: "auto",
             padding: "10px"
+        },
+        '&:hover': {
+            backgroundColor: "#5e5e5e"
         }
     }))
 
@@ -46,8 +49,12 @@ export default function Project({ title, urlImage, description, techs, /* porjec
                         <StyledTypograph textAlign="start">{description}</StyledTypograph>
                         <StyledTypograph paddingY={2} fontWeight="bold" textAlign="start">Techs: {techs}</StyledTypograph>
                         <Box display="flex" gap={2}>
-                            <StyledButton onClick={()=>{}}>Ver Projeto</StyledButton>
-                            <StyledButton onClick={()=>{}}>Ver Código</StyledButton>
+                            <Link width="100%" href={projectUrl} target="_blank">
+                                <StyledButton>Ver Projeto</StyledButton>
+                            </Link>
+                            <Link width="100%" href={codeUrl} target="_blank" disabled>
+                                <StyledButton>Ver Código</StyledButton>
+                            </Link>
                         </Box>
                     </>
                 </Container>
