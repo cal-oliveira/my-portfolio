@@ -6,22 +6,19 @@ type StyledButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     onClick?: () => void
 }
 
-export function StyledButton({ children, onClick, ...props }: StyledButtonProps){
+export function BtnDisable({ children, onClick, ...props }: StyledButtonProps){
 
     const StyledButton = styled("button")(({ theme })=>({
         backgroundColor: "transparent",
-        border: `1px solid ${theme.palette.primary.contrastText}`,
+        border: `1px solid rgba(211,211,211,0.2)`,
         borderRadius: "3px",
         padding: "5px 15px",
         width: "100%",
-        color: theme.palette.primary.contrastText,
+        color: "rgba(211,211,211,0.2)",
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
         gap: "10px",
-        '&:hover': {
-            backgroundColor: theme.palette.secondary.light
-        }
     }))
 
     return(

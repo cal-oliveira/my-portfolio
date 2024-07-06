@@ -1,5 +1,7 @@
 import { Box, Container, Link, Typography, styled } from "@mui/material"
 import { StyledButton } from "./StyledButton/StyledButton"
+import { DisabledByDefault } from "@mui/icons-material"
+import { BtnDisable } from "./BtnDisable"
 
 type ProjectProps = {
     title: string,
@@ -49,10 +51,19 @@ export default function Project({ title, urlImage, description, techs, projectUr
                         <StyledTypograph textAlign="start">{description}</StyledTypograph>
                         <StyledTypograph paddingY={2} fontWeight="bold" textAlign="start">Techs: {techs}</StyledTypograph>
                         <Box display="flex" gap={2}>
-                            <Link width="100%" href={projectUrl} target="_blank">
-                                <StyledButton>Ver Projeto</StyledButton>
-                            </Link>
-                            <Link width="100%" href={codeUrl} target="_blank" disabled>
+                            {
+                                projectUrl? (
+                                    <Link width="100%" href={projectUrl} target="_blank">
+                                        <StyledButton>Ver Projeto</StyledButton>
+                                    </Link>
+                                ) : (
+                                    <Box style={{ width: "100%" }}>
+                                        <BtnDisable disabled={true}>Ver Projeto</BtnDisable>
+                                    </Box>
+                                )
+                            }   
+                            
+                            <Link width="100%" href={codeUrl} target="_blank">
                                 <StyledButton>Ver Código</StyledButton>
                             </Link>
                         </Box>
