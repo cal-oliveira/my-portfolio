@@ -6,6 +6,7 @@ export function Footer(){
     const StyledFooter = styled("div")(()=>({
         backgroundColor: "#d3d3d3",
         height: "8vh",
+        overflow: "hidden",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

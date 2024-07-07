@@ -8,6 +8,7 @@ export function About(){
 
     const StyledAbout = styled("div")(()=>({
         height: "100%",
+        overflow: "hidden",
         marginTop: "20px",
         marginBottom: "20px",
         '@media (max-width: 600px)': {
@@ -25,6 +26,7 @@ export function About(){
         justifyContent: "center",
         flexDirection: "column",
         textAlign: "center",
+        
     }))
 
     const boxVariantsLeft = {
@@ -70,13 +72,13 @@ export function About(){
                                 <StyledBox>
                                     <WorkspacePremiumIcon />
                                     <Typography fontWeight="bold" fontSize={18}>Experiência</Typography>
-                                    <p>Em busca da minha primeira experiência profissional</p>
+                                    <p style={{ lineHeight: 1 }}>Em busca da minha primeira experiência profissional</p>
                                 </StyledBox>
                             </motion.div>
                         </Grid>
                     </Grid>
 
-                    <p style={{ textAlign: "center", lineHeight: '1.5' }}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero eligendi officiis eius facilis dolorum perspiciatis eos. Autem provident cupiditate in, amet quod sunt ut dicta exercitationem aliquam eum repellendus neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta libero in vitae, provident nemo dolores, cum voluptatum minus veniam rem atque tempora ex optio officia vero nobis reprehenderit quibusdam architecto. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi corrupti, iste animi pariatur accusamus facere veniam et tempore incidunt ipsum harum assumenda magnam dolorem cum qui quae natus rerum deleniti.</p>
+                    <p style={{ textAlign: "center", lineHeight: '1.5' }}>Fascinado pela magia que as tecnologias nos proporcionam e obstinado a chegar cada vez mais longe <br />Estudo programção de forma resiliente e estou em busca de experiências que me levem ao próximo nível🚀</p>
                     <hr />
                 </Container>
             </StyledAbout>

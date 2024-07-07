@@ -8,36 +8,10 @@ import { ReactTyped } from "react-typed";
 
 export function Hero(){
 
-    /* const useStyles = makeStyles({
-        animateText: {
-            display: 'block',
-            overflow: 'hidden',
-            width: "24ch",
-            whiteSpace: "nowrap",
-            boxShadow: "1rem 0 0 #f1e100",
-            animation: '$mark .5s steps(1, end) infinite alternate, $write 3s steps(22, end)',
-        },
-        '@keyframes write': {
-            '0%': {
-                width: '0',
-            },
-            '100%': {
-                width: '100%',
-            },
-        },
-        '@keyframes mark': {
-            '50%': {
-                boxShadow: '1rem 0 0 transparent',
-            },
-        },
-    });
-
-    const classes = useStyles() */
-
-
     const StyledHero = styled("div")(({ theme })=>({
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
+        width: "100vw",
         display: "flex",
         alignItems: "center"
     }))
@@ -47,6 +21,15 @@ export function Hero(){
         borderRadius: "50%",
         border: `1px solid ${theme.palette.primary.contrastText}`
     }))
+
+    /* const BoxAnimation = styled(Box)(()=>({
+        position:"absolute",
+        height:"auto",
+        width:"150%",
+        top: -160,
+        right:"-80",
+        
+    })) */
 
     // funcão para enviar email ao clicar em "contact me"
     function mailTo(){
@@ -60,17 +43,18 @@ export function Hero(){
     return(
         <>
             <StyledHero>
-
                 <Container maxWidth="lg">
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={5}>
-                            <Box position='relative'>
-                                <Box position="absolute" width="150%" top={-160} right={-80}>
-                                    <AnimatedBackground />
-                                </Box>
-                                <Box position="relative" textAlign="center">
-                                    <StyledImg src="https://github.com/cal-oliveira.png" alt="Foto do developer" />
-                                </Box>
+                            <Box position='relative' height="auto"  overflow={{ xs: "visible", md: "visible" }}>
+                                <>
+                                    <Box position="absolute" height="auto"  width={{xs: "100%", md: "150%" }} top={{ xs: -50, md: -160 }} right={{ xs: 0,md: -80 }}>
+                                        <AnimatedBackground />
+                                    </Box>
+                                    <Box position="relative" height="auto"  textAlign="center">
+                                        <StyledImg src="https://github.com/cal-oliveira.png" alt="Foto do developer" />
+                                    </Box>
+                                </>
                             </Box>
                         </Grid>
 
@@ -106,7 +90,6 @@ export function Hero(){
                         </Grid>
                     </Grid>
                 </Container>
-
             </StyledHero>
         </>
     )

@@ -1,11 +1,11 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material"
 import { SectionTitle } from "../../../../components/SectionTitle";
 
-
 export function Skills(){
 
     const StyledSkillMain = styled("div")(()=>({
         height: "100%",
+        overflow: "hidden",
         marginTop: "20px",
         marginBottom: "20px",
         '@media (max-width: 600px)': {
