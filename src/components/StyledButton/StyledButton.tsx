@@ -20,7 +20,7 @@ export function StyledButton({ children, onClick, ...props }: StyledButtonProps)
         justifyContent: "center",
         gap: "10px",
         '&:hover': {
-            backgroundColor: theme.palette.secondary.light
+            backgroundColor: "#9400d3"
         }
     }))
 

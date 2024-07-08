@@ -27,6 +27,9 @@ export default function Project({ title, urlImage, description, techs, projectUr
             height: "auto",
             padding: "10px"
         },
+        '@media (max-height: 900px)': {
+            height: "90vh",
+        },
         '&:hover': {
             backgroundColor: "#5e5e5e"
         }
