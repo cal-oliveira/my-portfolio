@@ -110,7 +110,7 @@ export function Projects() {
                 whileInView="visible"
                 viewport={{ once: false }}
                 transition={{ duration: 1, delay: 0.2 }}
-                variants={boxVariantsRight}
+                variants={boxVariantsLeft}
               >
                 <Project
                   title="Snake - Mobile"
