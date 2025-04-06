@@ -95,6 +95,24 @@ export function Projects() {
                 variants={boxVariantsRight}
               >
                 <Project
+                  title="Jogo da Memória - Mobile"
+                  urlImage="https://github.com/cal-oliveira/Jogo-da-memoria-React-Native/raw/main/screenshots/screen2.png?raw=true"
+                  description="Jogo da Memória onde as casrtas são tecnologias web (html, css, javascript e etc)"
+                  techs="React Native, TypeScript, Expo"
+                  codeUrl="https://github.com/cal-oliveira/Jogo-da-memoria-React-Native"
+                />
+              </motion.div>
+            </Grid>
+
+            <Grid item xs={12} lg={12}>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                transition={{ duration: 1, delay: 0.2 }}
+                variants={boxVariantsRight}
+              >
+                <Project
                   title="Snake - Mobile"
                   urlImage="https://github.com/cal-oliveira/snake-game-React-Native/blob/main/screenshots/game%20snake%20(online-video-cutter.com).gif?raw=true"
                   description="O clássico jogo da cobrinha (snake) para dispositivos móveis."
